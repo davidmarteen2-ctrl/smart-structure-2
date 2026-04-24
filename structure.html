@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Navigate — Own Your Data, Earn From It</title>
+  <meta name="description" content="Navigate is a decentralized intelligence platform that rewards you for the data you contribute. Join Data Quest and start earning today.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/structure.css">
+</head>
+<body>
+
+  <!-- ══════ NAVIGATION ══════ -->
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <!-- Pill Bar -->
+      <div class="nav__pill">
+        <a href="#" class="nav__logo" aria-label="Navigate Home">
+          <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="36" height="36" rx="8" fill="#FF6D38"/>
+            <path d="M18 8L12 14H16V22H12L18 28L24 22H20V14H24L18 8Z" fill="#141414"/>
+          </svg>
+        </a>
+        <div class="nav__links">
+          <a href="#project">Project</a>
+          <a href="#navigators">Navigators</a>
+          <a href="#rewards">Rewards</a>
+          <a href="#faq">FAQ</a>
+        </div>
+        <span class="nav__divider"></span>
+        <div class="nav__dropdown">
+          <button class="nav__dropdown-toggle">Products <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M7 10l5 5 5-5z"/></svg></button>
+          <div class="nav__dropdown-menu">
+            <a href="https://dataquest.nvg8.io/" target="_blank">Launch Game</a>
+          </div>
+        </div>
+      </div>
+      <!-- Launch Game — separate -->
+      <a href="https://dataquest.nvg8.io/" target="_blank" class="nav__cta">Launch Game</a>
+      <button class="nav__toggle" id="nav-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ══════ MOBILE MENU ══════ -->
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="#project">Project</a>
+    <a href="#navigators">Navigators</a>
+    <a href="#rewards">Rewards</a>
+    <a href="#faq">FAQ</a>
+    <a href="https://dataquest.nvg8.io/" target="_blank" class="btn btn--primary">Launch Game</a>
+  </div>
+
+  <!-- ══════ HERO ══════ -->
+  <section class="hero" id="project">
+    <div class="hero__content">
+      <h1 class="hero__heading">
+        <span class="hero__line"><span>Your data runs the</span></span>
+        <span class="hero__line"><span>world</span></span>
+      </h1>
+      <p class="hero__sub">Start earning from it today.</p>
+      <a href="https://chromewebstore.google.com/detail/navigate-data-quest/nggldafanajogepfhigplhkamalbpghc" target="_blank" class="btn btn--lime hero__cta">
+        <svg width="20" height="16" viewBox="0 0 24 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M14.6329 4.21145H9.36718C8.7851 4.21145 8.31341 3.74004 8.31341 3.15832C8.31341 2.57765 8.7851 2.10624 9.36718 2.10624H14.6329C15.215 2.10624 15.6867 2.57765 15.6867 3.15832C15.6867 3.74004 15.215 4.21145 14.6329 4.21145ZM0.414307 0V18.4213C0.414307 19.2892 1.1255 19.9999 1.99392 19.9999H22.0062C22.8746 19.9999 23.5858 19.2892 23.5858 18.4213V0H0.414307Z" fill="#EEEEEE"/>
+          <path d="M12.0006 8.42188C8.4686 8.42188 5.36456 10.2503 3.58398 13.0121V20H8.46235L12.0006 13.8748H20.9149C19.2583 10.6384 15.8877 8.42188 12.0006 8.42188Z" fill="#DB4437"/>
+          <path d="M3.5808 13.0156C2.57701 14.5745 1.9939 16.4299 1.9939 18.4217C1.9939 18.9587 2.03659 19.4863 2.11885 20.0004H7.65634L3.5808 13.0156Z" fill="#0F9D58"/>
+          <path d="M22.0061 18.4215C22.0061 16.7846 21.6125 15.2393 20.9148 13.875H12.0005L15.5387 20.0002H21.8811C21.9634 19.4861 22.0061 18.9585 22.0061 18.4215Z" fill="#FFCD40"/>
+          <path d="M12.0004 13.875C9.48784 13.875 7.45215 15.9105 7.45215 18.4215C7.45215 18.9772 7.55211 19.509 7.73433 20.0002H16.2665C16.4488 19.508 16.5487 18.9762 16.5487 18.4215C16.5487 15.9105 14.512 13.875 12.0004 13.875Z" fill="#4285F4"/>
+        </svg>
+        Download Rewards Extension
+      </a>
+    </div>
+
+    <!-- Icon Cards Row -->
+    <div class="icon-cards" id="icon-cards">
+      <div class="icon-card" data-icon="music" style="--card-bg: #7A78FF;">
+        <div class="icon-card__bg"></div>
+        <svg class="icon-card__svg" viewBox="0 0 64 64" fill="none"><path d="M44 14v28a8 8 0 1 1-4-6.93V22H24v20a8 8 0 1 1-4-6.93V14h24z" fill="#1a1a2e"/></svg>
+      </div>
+      <div class="icon-card" data-icon="film" style="--card-bg: #3CB043;">
+        <div class="icon-card__bg"></div>
+        <svg class="icon-card__svg" viewBox="0 0 64 64" fill="none"><rect x="12" y="12" width="40" height="40" rx="4" fill="#1a1a2e"/><rect x="12" y="12" width="8" height="10" fill="#1a1a2e" stroke="#3CB043" stroke-width="1.5"/><rect x="44" y="12" width="8" height="10" fill="#1a1a2e" stroke="#3CB043" stroke-width="1.5"/><rect x="12" y="42" width="8" height="10" fill="#1a1a2e" stroke="#3CB043" stroke-width="1.5"/><rect x="44" y="42" width="8" height="10" fill="#1a1a2e" stroke="#3CB043" stroke-width="1.5"/></svg>
+      </div>
+      <div class="icon-card" data-icon="ghost" style="--card-bg: #FF6D38;">
+        <div class="icon-card__bg"></div>
+        <svg class="icon-card__svg" viewBox="0 0 64 64" fill="none"><path d="M32 8C20.954 8 12 16.954 12 28v28l6-6 6 6 6-6 4 4 4-4 6 6 6-6 6 6V28C56 16.954 47.046 8 32 8z" fill="#1a1a2e"/><circle cx="24" cy="28" r="4" fill="#FF6D38"/><circle cx="40" cy="28" r="4" fill="#FF6D38"/></svg>
+      </div>
+      <div class="icon-card" data-icon="shop" style="--card-bg: #FFC412;">
+        <div class="icon-card__bg"></div>
+        <svg class="icon-card__svg" viewBox="0 0 64 64" fill="none"><path d="M16 24h32l-4 24H20L16 24z" fill="#1a1a2e"/><path d="M24 24V16a8 8 0 0 1 16 0v8" stroke="#1a1a2e" stroke-width="4" stroke-linecap="round"/><circle cx="32" cy="20" r="2" fill="#FFC412"/></svg>
+      </div>
+      <div class="icon-card" data-icon="tshirt" style="--card-bg: #478BFF;">
+        <div class="icon-card__bg"></div>
+        <svg class="icon-card__svg" viewBox="0 0 64 64" fill="none"><path d="M20 12l-8 12 8 4v24h24V28l8-4-8-12a12 12 0 0 1-24 0z" fill="#1a1a2e"/></svg>
+      </div>
+    </div>
+
+    <div class="hero__scroll" id="scroll-indicator">
+      <span>Scroll</span>
+      <div class="hero__scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ══════ THE PROBLEM — Pinned Section ══════ -->
+  <section class="problem" id="problem">
+    <div class="problem__pin">
+
+      <div class="problem__slide problem__slide--1">
+        <p class="problem__label">Here's a fun fact:</p>
+        <h2 class="problem__heading">Today, you are the product</h2>
+        <p class="problem__inline-text">
+          Your favorite <span class="icon-target" data-target="music"><svg viewBox="0 0 64 64" fill="none"><path d="M44 14v28a8 8 0 1 1-4-6.93V22H24v20a8 8 0 1 1-4-6.93V14h24z" fill="currentColor"/></svg></span> songs.
+          That <span class="icon-target" data-target="film"><svg viewBox="0 0 64 64" fill="none"><rect x="12" y="12" width="40" height="40" rx="4" fill="currentColor"/></svg></span> must-see movie.
+          Your top <span class="icon-target" data-target="ghost"><svg viewBox="0 0 64 64" fill="none"><path d="M32 8C20.954 8 12 16.954 12 28v28l6-6 6 6 6-6 4 4 4-4 6 6 6-6 6 6V28C56 16.954 47.046 8 32 8z" fill="currentColor"/><circle cx="24" cy="28" r="4" fill="#0a0a0c"/><circle cx="40" cy="28" r="4" fill="#0a0a0c"/></svg></span> interests and all your <span class="icon-target" data-target="shop"><svg viewBox="0 0 64 64" fill="none"><path d="M16 24h32l-4 24H20L16 24z" fill="currentColor"/><path d="M24 24V16a8 8 0 0 1 16 0v8" stroke="currentColor" stroke-width="4" stroke-linecap="round"/></svg></span> shopping habits <span class="icon-target" data-target="tshirt"><svg viewBox="0 0 64 64" fill="none"><path d="M20 12l-8 12 8 4v24h24V28l8-4-8-12a12 12 0 0 1-24 0z" fill="currentColor"/></svg></span>.
+        </p>
+      </div>
+
+      <div class="problem__slide problem__slide--2">
+        <h2 class="problem__heading reveal-words">Your data is taken by companies and used to train the next wave of AI models and build the world's top products and services. Yet it often happens without any earnings being distributed back to you.</h2>
+      </div>
+
+      <div class="problem__slide problem__slide--3">
+        <h2 class="problem__heading">It's time for a change.</h2>
+        <p class="problem__body">With <strong class="text--accent">Navigate</strong> you join a decentralized intelligence platform that puts the power back in your hands and rewards you for the data you contribute.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══════ CHAPTERS — Navigators ══════ -->
+  <section class="chapters" id="navigators">
+
+    <div class="chapter" data-chapter="1">
+      <div class="chapter__number"><span class="chapter__badge chapter__badge--orange">1</span><span class="chapter__label">Introduction</span></div>
+      <h2 class="chapter__heading">
+        <span class="chapter__line"><span>Meet the</span></span>
+        <span class="chapter__line"><span>Navigators</span></span>
+      </h2>
+      <p class="chapter__desc">Empowered digital avatars designed to represent you.</p>
+      <p class="chapter__body reveal-words">They reflect your data habits and lifestyle, making your Navigate journey unique to you.</p>
+    </div>
+
+    <div class="chapter" data-chapter="2">
+      <div class="chapter__number"><span class="chapter__badge chapter__badge--purple">2</span><span class="chapter__label">Your Navigator</span></div>
+      <h2 class="chapter__heading">
+        <span class="chapter__line"><span>Your Data</span></span>
+        <span class="chapter__line"><span>Quest Partner</span></span>
+      </h2>
+      <p class="chapter__desc">Your Navigator is the gateway to the Data Quest app, a gamified platform that rewards you for each and every data contribution.</p>
+      <p class="chapter__body reveal-words">Sharing data shouldn't come at the cost of your privacy. Navigators are the guardians of your data, shielding your personally identifiable information and giving you control of what you share in Data Quest.</p>
+    </div>
+
+    <div class="chapter" data-chapter="3">
+      <div class="chapter__number"><span class="chapter__badge chapter__badge--lime">3</span><span class="chapter__label">Data Quest</span></div>
+      <h2 class="chapter__heading">
+        <span class="chapter__line"><span>Customizing</span></span>
+        <span class="chapter__line"><span>Your Navigator</span></span>
+      </h2>
+      <p class="chapter__desc">Navigators are shaped by the data you share and are your gateway to earning Navigate points.</p>
+      <p class="chapter__body reveal-words">As you reach new levels in Data Quest, you will unlock unique gear and gadgets that your Navigator can redeem with points in the game.</p>
+    </div>
+
+  </section>
+
+  <!-- ══════ REWARDS ══════ -->
+  <section class="rewards" id="rewards">
+    <div class="rewards__inner">
+      <div class="rewards__top">
+        <h2 class="section-heading fade-up">Sign up and<br><span class="text--accent">start earning</span></h2>
+        <p class="rewards__desc fade-up">Become a Navigator by signing up to Data Quest and earn from the valuable data you create.</p>
+        <a href="https://dataquest.nvg8.io/" target="_blank" class="btn btn--primary fade-up">Sign Up Now</a>
+      </div>
+      <div class="rewards__bottom">
+        <h3 class="rewards__question fade-up">Why is decentralized intelligence important?</h3>
+        <p class="rewards__answer fade-up">Valuable data for AI should not only be in the hands of a few large organizations. It's time for a shift, and decentralizing data collection is the way forward.</p>
+        <p class="rewards__answer fade-up">Navigate is a decentralized data platform that will liberate your data, rewarding you and its community for helping build new and valuable datasets for AI.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════ FAQ ══════ -->
+  <section class="faq" id="faq">
+    <div class="faq__inner">
+      <h2 class="section-heading fade-up">Most Common<br><span class="text--accent">Questions</span></h2>
+      <div class="faq__list">
+
+        <div class="faq__item fade-up">
+          <button class="faq__question">What is Navigate?<span class="faq__icon">+</span></button>
+          <div class="faq__answer"><p>Navigate is the first Web3-native big data platform gamifying and decentralizing the collection of training data. Its mission is to build a decentralized intelligence platform that enables individuals to earn from the valuable data they generate everyday.</p></div>
+        </div>
+
+        <div class="faq__item fade-up">
+          <button class="faq__question">What problem does Navigate solve?<span class="faq__icon">+</span></button>
+          <div class="faq__answer"><p>The future of AI hinges on two simple variables: compute and data. But we are rapidly exhausting our stockpile of publicly available training data. Navigate is changing this by building a platform that creates and augments datasets for training and tuning AI models.</p></div>
+        </div>
+
+        <div class="faq__item fade-up">
+          <button class="faq__question">What is Data Quest?<span class="faq__icon">+</span></button>
+          <div class="faq__answer"><p>Data Quest is Navigate's application that gamifies the collection and labeling of data. Users are rewarded for actively contributing high-value training data through quests and passively contributing data streams through data connections.</p></div>
+        </div>
+
+        <div class="faq__item fade-up">
+          <button class="faq__question">What type of data does Navigate collect?<span class="faq__icon">+</span></button>
+          <div class="faq__answer"><p>The Data Quest game collects and augments many types of datasets — from active data contributions like data labeling to datasets from apps you choose to connect such as Amazon or Spotify. You're in control and choose to contribute only what you want to.</p></div>
+        </div>
+
+        <div class="faq__item fade-up">
+          <button class="faq__question">How does Navigate handle data privacy?<span class="faq__icon">+</span></button>
+          <div class="faq__answer"><p>We are building Navigate with a privacy-first mentality. Whether you are sharing personal insights or labeling datasets — all data will be anonymized and encrypted according to data security best practices.</p></div>
+        </div>
+
+        <div class="faq__item fade-up">
+          <button class="faq__question">What will I earn?<span class="faq__icon">+</span></button>
+          <div class="faq__answer"><p>Navigators earn points for each and every contribution to the platform. Points will play a big role in the Navigate ecosystem, so stay tuned!</p></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════ CTA & FOOTER ══════ -->
+  <section class="cta-section">
+    <div class="cta__inner">
+      <h2 class="cta__heading">
+        <span class="cta__line"><span>Playing Data Quest</span></span>
+        <span class="cta__line"><span class="text--accent">to Build</span></span>
+      </h2>
+      <p class="cta__body">Join a community building user-owned datasets for better AI models. Navigators help create a new data ecosystem, allowing people to earn from the valuable data they generate daily.</p>
+      <a href="https://dataquest.nvg8.io/" target="_blank" class="btn btn--primary btn--lg">Sign up to earn from your data →</a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__top">
+        <div class="footer__brand">Navigate</div>
+        <div class="footer__cols">
+          <div class="footer__col">
+            <h4>Experience</h4>
+            <a href="https://dataquest.nvg8.io/" target="_blank">Data Quest App</a>
+            <a href="mailto:info@nvg8.io">Get In Touch</a>
+          </div>
+          <div class="footer__col">
+            <h4>Explore</h4>
+            <a href="https://docs.nvg8.io/" target="_blank">Visit Our Docs</a>
+            <a href="https://paragraph.xyz/@navigate" target="_blank">Our Blog</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <div class="footer__legal">
+          <a href="https://dataquest.nvg8.io/privacy.pdf" target="_blank">Privacy Policy</a>
+          <a href="https://dataquest.nvg8.io/terms_of_use.pdf" target="_blank">Terms of Service</a>
+        </div>
+        <p class="footer__copy">© Navigate 2024</p>
+        <div class="footer__socials">
+          <a href="https://discord.com/invite/nvg8" target="_blank" aria-label="Discord">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.317 4.37a19.8 19.8 0 0 0-4.885-1.515.07.07 0 0 0-.073.035c-.21.375-.444.864-.608 1.25a18.3 18.3 0 0 0-5.487 0 12.6 12.6 0 0 0-.617-1.25.07.07 0 0 0-.073-.035A19.7 19.7 0 0 0 3.69 4.37a.06.06 0 0 0-.031.025C.533 9.046-.32 13.58.099 18.057a.08.08 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.07.07 0 0 0 .078-.028 14.1 14.1 0 0 0 1.226-1.994.07.07 0 0 0-.041-.097 13.1 13.1 0 0 1-1.872-.892.07.07 0 0 1-.008-.117c.126-.094.252-.192.372-.291a.07.07 0 0 1 .071-.01c3.928 1.793 8.18 1.793 12.062 0a.07.07 0 0 1 .072.009c.12.099.246.198.373.292a.07.07 0 0 1-.006.117c-.598.35-1.22.645-1.873.891a.07.07 0 0 0-.04.098c.36.698.772 1.363 1.225 1.993a.07.07 0 0 0 .078.028 19.8 19.8 0 0 0 6.002-3.03.08.08 0 0 0 .032-.056c.5-5.177-.838-9.674-3.549-13.66a.06.06 0 0 0-.031-.026zM8.02 15.33c-1.183 0-2.157-1.086-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.095 2.157 2.42 0 1.332-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.086-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.095 2.157 2.42 0 1.332-.946 2.418-2.157 2.418z"/></svg>
+          </a>
+          <a href="https://x.com/navigate_ai" target="_blank" aria-label="X">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </a>
+          <a href="https://warpcast.com/navigate" target="_blank" aria-label="Farcaster">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><rect x="3" y="3" width="18" height="18" rx="3" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M7 8h10M7 12h7M7 16h4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ══════ SCRIPTS ══════ -->
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1/dist/lenis.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/Flip.min.js"></script>
+  <script src="js/structure.js"></script>
+
+</body>
+</html>

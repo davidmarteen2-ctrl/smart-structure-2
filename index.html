@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SmartTradeHQ — Managed NAS100 Trading</title>
+  <meta name="description" content="NAS100 only. NY Session only. ICT-based precision. Fully managed." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════
+       LOADER
+  ═══════════════════════════════════════════ -->
+  <div id="loader">
+    <div class="loader-inner">
+      <div class="loader-brand">SmartTradeHQ</div>
+      <div class="loader-track">
+        <div id="loader-bar"></div>
+      </div>
+      <div id="loader-percent">0%</div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════
+       SCROLL PROGRESS BAR (right edge)
+  ═══════════════════════════════════════════ -->
+  <div id="scroll-progress">
+    <div id="progress-fill"></div>
+    <div id="progress-dot"></div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════
+       FIXED HEADER
+  ═══════════════════════════════════════════ -->
+  <header class="site-header" id="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="header-logo">Smart<span>Trade</span>HQ</a>
+      <nav class="header-nav">
+        <a href="#how-it-works">How It Works</a>
+        <a href="#the-system">The System</a>
+        <a href="#tiers">Tiers</a>
+        <a href="#about">About</a>
+      </nav>
+      <a href="payment.html" class="btn btn--orange btn--sm">Apply Now</a>
+      <button class="nav-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ═══════════════════════════════════════════
+       HERO — standalone 100vh
+  ═══════════════════════════════════════════ -->
+  <section class="hero-standalone" id="hero">
+    <!-- Mobile bg fallback -->
+    <div id="hero-mobile-bg"></div>
+    <div class="hero-content align-left">
+      <span class="section-label">001 / The Opportunity</span>
+      <h1 class="hero-heading">
+        <span class="hero-line">You Don't Need To Know</span>
+        <span class="hero-line">How To Trade.</span>
+        <span class="hero-line hero-line--accent">You Just Need Someone Who Does.</span>
+      </h1>
+      <p class="hero-tagline">NAS100 only. NY Session only. ICT-based precision. Fully managed.</p>
+      <a href="#how-it-works" class="btn btn--cyan hero-cta">See How It Works →</a>
+    </div>
+    <div class="scroll-indicator" id="scroll-indicator">
+      <span>Scroll</span>
+      <svg width="16" height="24" viewBox="0 0 16 24" fill="none">
+        <rect x="6" y="0" width="4" height="10" rx="2" fill="#00D4FF" opacity="0.5"/>
+        <path d="M8 14 L3 19 L8 24 L13 19 Z" fill="#00D4FF"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       CANVAS (scroll-driven video)
+  ═══════════════════════════════════════════ -->
+  <div class="canvas-wrap" id="canvas-wrap">
+    <canvas id="canvas"></canvas>
+  </div>
+
+  <!-- Dark overlay -->
+  <div id="dark-overlay"></div>
+
+  <!-- ═══════════════════════════════════════════
+       MARQUEE (fixed, appears between scenes 3→4)
+  ═══════════════════════════════════════════ -->
+  <div class="marquee-wrap" id="marquee" data-scroll-speed="-25">
+    <div class="marquee-text">
+      NAS100 ONLY &nbsp;·&nbsp; NY SESSION ONLY &nbsp;·&nbsp; DSP SYSTEM &nbsp;·&nbsp; SMARTTRADEHQ &nbsp;·&nbsp; ICT METHODOLOGY &nbsp;·&nbsp;
+      NAS100 ONLY &nbsp;·&nbsp; NY SESSION ONLY &nbsp;·&nbsp; DSP SYSTEM &nbsp;·&nbsp; SMARTTRADEHQ &nbsp;·&nbsp; ICT METHODOLOGY &nbsp;·&nbsp;
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════
+       SCROLL CONTAINER — 900vh
+  ═══════════════════════════════════════════ -->
+  <div id="scroll-container">
+
+    <!-- ─── SCENE 2 — PROBLEM & SOLUTION (20-38%) ─── -->
+    <section id="how-it-works"
+             class="scroll-section scene-2-left"
+             data-enter="20" data-leave="38"
+             data-animation="slide-left">
+      <div class="section-inner">
+        <span class="section-label">002 / The Problem</span>
+        <div class="problem-list">
+          <p class="problem-line">"You're trading noise,<br>not structure."</p>
+          <p class="problem-line">"You react to moves that<br>were planned against you."</p>
+          <p class="problem-line">"Your system has no edge.<br>It has hope."</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="scroll-section scene-2-right"
+             data-enter="20" data-leave="38"
+             data-animation="slide-right">
+      <div class="section-inner">
+        <div class="dsp-reveal">
+          <div class="dsp-row" data-dsp-delay="0">
+            <span class="dsp-letter">D</span>
+            <div class="dsp-desc">
+              <span class="dsp-word">Deceptive</span>
+              <span class="dsp-sub">The market fakes a move to trap you</span>
+            </div>
+          </div>
+          <div class="dsp-row" data-dsp-delay="1">
+            <span class="dsp-letter">S</span>
+            <div class="dsp-desc">
+              <span class="dsp-word">Swing</span>
+              <span class="dsp-sub">We identify the false swing before it happens</span>
+            </div>
+          </div>
+          <div class="dsp-row" data-dsp-delay="2">
+            <span class="dsp-letter">P</span>
+            <div class="dsp-desc">
+              <span class="dsp-word">Powercore</span>
+              <span class="dsp-sub">The real move fires and we're already positioned</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── SCENE 3 — METHODOLOGY (40-55%) ─── -->
+    <section id="the-system"
+             class="scroll-section scene-3"
+             data-enter="40" data-leave="55"
+             data-animation="stagger-up">
+      <div class="section-inner section-inner--wide">
+        <span class="section-label">003 / The System</span>
+        <h2 class="section-heading">The DSP System</h2>
+        <div class="method-flow">
+          <div class="method-step" data-step-index="0">
+            <div class="step-connector"></div>
+            <div class="step-num">01</div>
+            <div class="step-title">Asia Range</div>
+            <div class="step-desc">Define the dealing range during Asian session</div>
+          </div>
+          <div class="method-step" data-step-index="1">
+            <div class="step-connector"></div>
+            <div class="step-num">02</div>
+            <div class="step-title">CBDR</div>
+            <div class="step-desc">Central Bank Dealer Range sets the boundaries</div>
+          </div>
+          <div class="method-step" data-step-index="2">
+            <div class="step-connector"></div>
+            <div class="step-num">03</div>
+            <div class="step-title">Judas Swing</div>
+            <div class="step-desc">False move to grab liquidity before real move</div>
+          </div>
+          <div class="method-step" data-step-index="3">
+            <div class="step-connector"></div>
+            <div class="step-num">04</div>
+            <div class="step-title">NY Killzone</div>
+            <div class="step-desc">2PM to 4PM WAT is the execution window</div>
+          </div>
+          <div class="method-step" data-step-index="4">
+            <div class="step-connector"></div>
+            <div class="step-num">05</div>
+            <div class="step-title">DSP Entry</div>
+            <div class="step-desc">Deceptive Swing Powercore confirmation fires</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── SCENE 4 — TIERS (57-70%) ─── -->
+    <section id="tiers"
+             class="scroll-section scene-4"
+             data-enter="57" data-leave="70"
+             data-animation="scale-up">
+      <div class="section-inner section-inner--wide">
+        <span class="section-label">004 / Get Started</span>
+        <h2 class="section-heading">Choose Your Entry Point</h2>
+        <div class="tiers-grid">
+
+          <div class="tier-card" data-tier="scout">
+            <div class="tier-name">Scout</div>
+            <div class="tier-min">$2,000 <span>minimum</span></div>
+            <div class="tier-split">
+              <span class="split-you">50%</span>
+              <span class="split-sep">/</span>
+              <span class="split-them">50%</span>
+            </div>
+            <div class="tier-split-label">profit split</div>
+            <div class="tier-fee">$400 USDT setup fee</div>
+            <a href="payment.html?tier=scout" class="btn btn--outline tier-cta">Start as Scout →</a>
+          </div>
+
+          <div class="tier-card card--featured" data-tier="commander">
+            <div class="tier-badge">Most Popular</div>
+            <div class="tier-name">Commander</div>
+            <div class="tier-min">$5,000 <span>minimum</span></div>
+            <div class="tier-split">
+              <span class="split-you">60%</span>
+              <span class="split-sep">/</span>
+              <span class="split-them">40%</span>
+            </div>
+            <div class="tier-split-label">you keep 60% of profits</div>
+            <div class="tier-fee">$400 USDT setup fee</div>
+            <a href="payment.html?tier=commander" class="btn btn--cyan tier-cta">Start as Commander →</a>
+          </div>
+
+          <div class="tier-card" data-tier="warlord">
+            <div class="tier-name">Warlord</div>
+            <div class="tier-min">$10,000+ <span>minimum</span></div>
+            <div class="tier-split">
+              <span class="split-you">Custom</span>
+            </div>
+            <div class="tier-split-label">negotiated split</div>
+            <div class="tier-fee">$400 USDT setup fee</div>
+            <a href="payment.html?tier=warlord" class="btn btn--outline tier-cta">Start as Warlord →</a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── SCENE 5 — TESTIMONIALS (72-83%) ─── -->
+    <section class="scroll-section scene-5"
+             data-enter="72" data-leave="83"
+             data-animation="rotate-in">
+      <div class="section-inner section-inner--wide">
+        <span class="section-label">005 / Client Results</span>
+        <h2 class="section-heading">Don't Take Our Word For It</h2>
+        <div class="testimonials-grid">
+
+          <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p class="testimonial-quote">"I tried trading for 2 years and lost consistently. Handed my account to David and watched it grow steadily for 3 months straight. Best financial decision I made."</p>
+            <div class="testimonial-author">
+              <div class="author-name">James O.</div>
+              <div class="author-meta">London, UK · Commander</div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p class="testimonial-quote">"As an investor I don't have time to watch charts. SmartTradeHQ handles everything professionally. The returns speak for themselves and the communication is always clear."</p>
+            <div class="testimonial-author">
+              <div class="author-name">Michael T.</div>
+              <div class="author-meta">Dubai, UAE · Warlord</div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p class="testimonial-quote">"Started with Scout to test the waters. Three months later I upgraded to Commander. David's DSP system is the real deal — consistent and disciplined."</p>
+            <div class="testimonial-author">
+              <div class="author-name">Chidi A.</div>
+              <div class="author-meta">Lagos, Nigeria · Scout → Commander</div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p class="testimonial-quote">"I was looking for a quick fix but what I found was a proper system. Consistent weekly results, transparent reporting, and David actually explains every trade. Incredible."</p>
+            <div class="testimonial-author">
+              <div class="author-name">Ryan M.</div>
+              <div class="author-meta">Toronto, Canada · Commander</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── SCENE 6 — FOUNDER + FAQ (76-88%) ─── -->
+    <section id="about"
+             class="scroll-section scene-6-left"
+             data-enter="76" data-leave="88"
+             data-animation="fade-up">
+      <div class="section-inner">
+        <span class="section-label">006 / The Founder</span>
+        <div class="bio-lines">
+          <p class="bio-line">"My name is David Edet."</p>
+          <p class="bio-line">"I have traded NAS100 exclusively for 7 years."</p>
+          <p class="bio-line">"I trade the NY session only — 2PM to 4PM WAT."</p>
+          <p class="bio-line">"My system is built on ICT methodology."</p>
+          <p class="bio-line">"I call it DSP — Deceptive Swing Powercore."</p>
+          <p class="bio-line">"Every account I manage is traded with the same discipline."</p>
+          <p class="bio-line">"No gambling. No guessing. Only structure."</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="scroll-section scene-6-right"
+             data-enter="76" data-leave="88"
+             data-animation="slide-right">
+      <div class="section-inner">
+        <div class="faq-list">
+          <div class="faq-item">
+            <button class="faq-q">
+              How does the managed account work?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-a">
+              <p>You fund your Exness account and grant me limited trading access. I trade NAS100 during the NY session only using the DSP system. Profits are split according to your tier at the end of each agreed cycle.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q">
+              What is the minimum to get started?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-a">
+              <p>The minimum is $2,000 for the Scout tier. Commander starts at $5,000 and Warlord at $10,000 and above. All tiers require a one-time $400 USDT setup fee.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q">
+              How are profits shared?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-a">
+              <p>Scout is 50/50. Commander gives you 60% of all profits. Warlord is custom negotiated based on your capital size.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q">
+              How do I send funds and what payment methods do you accept?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-a">
+              <p>Setup fees are paid in USDT via TRC20, ERC20, or BEP20 networks. Your trading capital goes directly into your own Exness account — you maintain full ownership at all times.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q">
+              What results can I realistically expect?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-a">
+              <p>Results depend on market conditions and capital size. I trade with strict risk management — maximum 2 losses per day before I stop. Consistency over big wins is the goal.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── SCENE 7 — THE CLOSE (90-100%) ─── -->
+    <section class="scroll-section scene-7"
+             data-enter="90" data-leave="100"
+             data-animation="clip-reveal"
+             data-persist="true">
+      <div class="section-inner section-inner--center">
+        <div class="manifesto">
+          <p class="manifesto-line">"The market is not random."</p>
+          <p class="manifesto-line">"It is engineered to deceive."</p>
+          <p class="manifesto-line">"DSP was built to see through the deception."</p>
+          <p class="manifesto-line">"One instrument. One session. One system."</p>
+        </div>
+        <div class="brand-mark">D.S.P.</div>
+        <p class="close-subtext">Managed accounts now open.</p>
+        <a href="payment.html" class="btn btn--orange btn--lg close-cta">Start Your Application →</a>
+      </div>
+    </section>
+
+  </div><!-- /#scroll-container -->
+
+  <!-- ═══════════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════════ -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">Smart<span>Trade</span>HQ</div>
+        <nav class="footer-nav">
+          <a href="#how-it-works">How It Works</a>
+          <a href="#the-system">The System</a>
+          <a href="#tiers">Tiers</a>
+          <a href="#about">About</a>
+          <a href="payment.html">Apply Now</a>
+        </nav>
+        <div class="footer-social">
+          <a href="#" class="social-link" aria-label="Telegram">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.248l-2.008 9.469c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12L7.26 14.4l-2.95-.924c-.64-.203-.654-.64.136-.948l11.527-4.445c.535-.194 1.003.131.589.165z"/></svg>
+          </a>
+          <a href="#" class="social-link" aria-label="Facebook">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <a href="mailto:davidemre1991@gmail.com" class="footer-email">davidemre1991@gmail.com</a>
+        <p class="footer-disclaimer">Trading involves significant risk of loss. Past performance is not indicative of future results. SmartTradeHQ managed accounts are not guaranteed investments.</p>
+        <p class="footer-copy">© 2026 SmartTradeHQ. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ═══════════════════════════════════════════
+       CDN SCRIPTS
+  ═══════════════════════════════════════════ -->
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1/dist/lenis.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
+  <script src="js/app.js"></script>
+
+</body>
+</html>

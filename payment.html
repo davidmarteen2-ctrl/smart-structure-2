@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Start Your Application — SmartTradeHQ</title>
+  <meta name="description" content="Apply for a SmartTradeHQ managed NAS100 account. Fill out the form below and David will contact you within 24 hours." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ─── HEADER ─── -->
+  <header class="site-header" id="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="header-logo">Smart<span>Trade</span>HQ</a>
+      <nav class="header-nav">
+        <a href="index.html#how-it-works">How It Works</a>
+        <a href="index.html#the-system">The System</a>
+        <a href="index.html#tiers">Tiers</a>
+        <a href="index.html#about">About</a>
+      </nav>
+      <a href="payment.html" class="btn btn--orange btn--sm">Apply Now</a>
+      <button class="nav-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ─── MAIN ─── -->
+  <main class="payment-page">
+
+    <div class="payment-hero">
+      <span class="section-label" style="display:inline-block;margin-bottom:16px;">
+        Application
+      </span>
+      <h1 class="payment-title">Start Your Application</h1>
+      <p class="payment-subtitle">
+        Complete the form below.<br>David will contact you within 24 hours.
+      </p>
+    </div>
+
+    <div class="payment-body">
+
+      <!-- Network toggle -->
+      <div style="margin-bottom:10px;">
+        <p style="font-size:0.78rem;color:var(--text2);font-weight:600;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:12px;">
+          Select payment network
+        </p>
+        <div class="network-toggle">
+          <button class="network-btn active" data-network="TRC20">TRC20</button>
+          <button class="network-btn" data-network="ERC20">ERC20</button>
+          <button class="network-btn" data-network="BEP20">BEP20</button>
+        </div>
+      </div>
+
+      <!-- Wallet display -->
+      <div class="wallet-box">
+        <div>
+          <div class="wallet-label">USDT Wallet Address — <span id="active-network">TRC20</span></div>
+          <div class="wallet-address" id="wallet-address">TAv6bQQSvxsF7ruk26qfNur9Sogofa5tWJ</div>
+        </div>
+        <button class="copy-btn" id="copy-btn">Copy</button>
+      </div>
+
+      <!-- Fee display -->
+      <div class="fee-display" style="margin-bottom:28px;">
+        <span class="fee-label">One-time setup fee</span>
+        <span class="fee-amount" id="fee-amount">
+          $400 <span style="font-size:0.75rem;font-weight:400;color:var(--text2);">USDT</span>
+        </span>
+      </div>
+
+      <!-- Application Form -->
+      <form class="pay-form" id="pay-form"
+            action="https://api.web3forms.com/submit"
+            method="POST">
+
+        <!-- Web3Forms hidden fields -->
+        <input type="hidden" name="access_key" value="fc88a5e5-a411-46e4-9f87-3525a39bcf63" />
+        <input type="hidden" name="subject" value="New SmartTradeHQ Application" />
+        <input type="hidden" name="from_name" value="SmartTradeHQ Application Form" />
+        <input type="hidden" name="to" value="davidemre1991@gmail.com" />
+        <input type="hidden" name="redirect" value="" />
+        <input type="hidden" name="botcheck" value="" style="display:none" />
+        <input type="hidden" name="selected_network" id="hidden-network" value="TRC20" />
+        <input type="hidden" name="discount_applied" id="hidden-discount" value="None" />
+        <input type="hidden" name="final_fee" id="hidden-fee" value="$400 USDT" />
+
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="full-name">Full Name *</label>
+            <input class="form-input" type="text" id="full-name" name="full_name"
+                   placeholder="Your full name" required />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="email">Email Address *</label>
+            <input class="form-input" type="email" id="email" name="email"
+                   placeholder="your@email.com" required />
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="tier">Account Tier *</label>
+            <select class="form-select" id="tier" name="tier" required>
+              <option value="">Select your tier</option>
+              <option value="Scout">Scout — $2,000 minimum</option>
+              <option value="Commander">Commander — $5,000 minimum</option>
+              <option value="Warlord">Warlord — $10,000+ minimum</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="investment">Investment Amount (USD) *</label>
+            <input class="form-input" type="number" id="investment" name="investment_amount"
+                   placeholder="e.g. 5000" min="0" required />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="txid">Transaction ID *</label>
+          <input class="form-input" type="text" id="txid" name="transaction_id"
+                 placeholder="Paste your USDT transaction hash" required />
+        </div>
+
+        <!-- Discount code -->
+        <div class="form-group">
+          <label class="form-label">Discount Code <span style="color:var(--text3)">(optional)</span></label>
+          <div class="discount-row">
+            <input class="form-input" type="text" id="discount-code" name="discount_code_entered"
+                   placeholder="e.g. DSP200" autocomplete="off" style="text-transform:uppercase" />
+            <button type="button" class="btn btn--outline btn--sm" id="apply-discount">Apply</button>
+          </div>
+          <div class="discount-feedback" id="discount-feedback"></div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="message">Message <span style="color:var(--text3)">(optional)</span></label>
+          <textarea class="form-textarea" id="message" name="message"
+                    placeholder="Any questions or additional details..."></textarea>
+        </div>
+
+        <button type="submit" class="btn btn--orange submit-btn">
+          Submit Application →
+        </button>
+
+      </form>
+
+      <!-- Success state -->
+      <div class="success-state" id="success-state">
+        <svg class="success-check" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="32" cy="32" r="30" stroke="currentColor" stroke-width="2"/>
+          <path d="M20 32 L28 40 L44 24" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <h2 class="success-title">Application Received.</h2>
+        <p class="success-body">
+          David will contact you within 24 hours.<br>
+          Email confirmation sent to your inbox.
+        </p>
+        <a href="index.html" class="btn btn--outline" style="margin-top:8px;">← Back to Home</a>
+      </div>
+
+    </div><!-- /.payment-body -->
+  </main>
+
+  <!-- ─── FOOTER ─── -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">Smart<span>Trade</span>HQ</div>
+        <nav class="footer-nav">
+          <a href="index.html#how-it-works">How It Works</a>
+          <a href="index.html#the-system">The System</a>
+          <a href="index.html#tiers">Tiers</a>
+          <a href="index.html#about">About</a>
+          <a href="payment.html">Apply Now</a>
+        </nav>
+        <div class="footer-social">
+          <a href="#" class="social-link" aria-label="Telegram">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.248l-2.008 9.469c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12L7.26 14.4l-2.95-.924c-.64-.203-.654-.64.136-.948l11.527-4.445c.535-.194 1.003.131.589.165z"/></svg>
+          </a>
+          <a href="#" class="social-link" aria-label="Facebook">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <a href="mailto:davidemre1991@gmail.com" class="footer-email">davidemre1991@gmail.com</a>
+        <p class="footer-disclaimer">Trading involves significant risk of loss. Past performance is not indicative of future results. SmartTradeHQ managed accounts are not guaranteed investments.</p>
+        <p class="footer-copy">© 2026 SmartTradeHQ. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ─── SCRIPTS ─── -->
+  <script>
+  (function () {
+    'use strict';
+
+    /* ── WALLET ADDRESSES ── */
+    const WALLETS = {
+      TRC20: 'TAv6bQQSvxsF7ruk26qfNur9Sogofa5tWJ',
+      ERC20: '0x2c80e04b0d4e061041327faca47c35e2d7710538',
+      BEP20: '0x2c80e04b0d4e061041327faca47c35e2d7710538',
+    };
+
+    /* ── DISCOUNT CODES (edit here) ── */
+    const DISCOUNT_CODES = {
+      'DSP200':  { off: 200, label: '$200 off setup fee' },
+      'DSP400':  { off: 400, label: 'Setup fee waived (FREE)' },
+      'SCOUT50': { off: 50,  label: '$50 off your tier' },
+      'VIP':     { off: 400, label: '$400 off — VIP access' },
+    };
+    const BASE_FEE = 400;
+
+    /* ── STATE ── */
+    let currentDiscount = 0;
+    let currentDiscountLabel = '';
+
+    /* ── DOM ── */
+    const networkBtns   = document.querySelectorAll('.network-btn');
+    const walletDisplay = document.getElementById('wallet-address');
+    const activeNetwork = document.getElementById('active-network');
+    const hiddenNetwork = document.getElementById('hidden-network');
+    const copyBtn       = document.getElementById('copy-btn');
+    const feeAmount     = document.getElementById('fee-amount');
+    const hiddenFee     = document.getElementById('hidden-fee');
+    const hiddenDiscount= document.getElementById('hidden-discount');
+    const discountInput = document.getElementById('discount-code');
+    const applyBtn      = document.getElementById('apply-discount');
+    const feedback      = document.getElementById('discount-feedback');
+    const tierSelect    = document.getElementById('tier');
+    const payForm       = document.getElementById('pay-form');
+    const successState  = document.getElementById('success-state');
+    const header        = document.getElementById('site-header');
+
+    /* ── PRE-FILL TIER FROM URL ── */
+    const urlParams = new URLSearchParams(window.location.search);
+    const tierParam = urlParams.get('tier');
+    if (tierParam && tierSelect) {
+      const match = {
+        scout:     'Scout',
+        commander: 'Commander',
+        warlord:   'Warlord',
+      };
+      const val = match[tierParam.toLowerCase()];
+      if (val) tierSelect.value = val;
+    }
+
+    /* ── NETWORK TOGGLE ── */
+    networkBtns.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        networkBtns.forEach((b) => b.classList.remove('active'));
+        btn.classList.add('active');
+        const net = btn.dataset.network;
+        walletDisplay.textContent = WALLETS[net];
+        activeNetwork.textContent = net;
+        hiddenNetwork.value = net;
+        copyBtn.textContent = 'Copy';
+        copyBtn.classList.remove('copied');
+      });
+    });
+
+    /* ── COPY WALLET ADDRESS ── */
+    copyBtn.addEventListener('click', () => {
+      const addr = walletDisplay.textContent.trim();
+      navigator.clipboard.writeText(addr).then(() => {
+        copyBtn.textContent = 'Copied!';
+        copyBtn.classList.add('copied');
+        setTimeout(() => {
+          copyBtn.textContent = 'Copy';
+          copyBtn.classList.remove('copied');
+        }, 2500);
+      }).catch(() => {
+        /* fallback */
+        const ta = document.createElement('textarea');
+        ta.value = addr;
+        ta.style.position = 'fixed';
+        ta.style.opacity = '0';
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand('copy');
+        document.body.removeChild(ta);
+        copyBtn.textContent = 'Copied!';
+        copyBtn.classList.add('copied');
+        setTimeout(() => {
+          copyBtn.textContent = 'Copy';
+          copyBtn.classList.remove('copied');
+        }, 2500);
+      });
+    });
+
+    /* ── DISCOUNT CODE ── */
+    function updateFeeDisplay(discountOff, label) {
+      const finalFee = Math.max(0, BASE_FEE - discountOff);
+      currentDiscount = discountOff;
+      currentDiscountLabel = label || '';
+
+      if (discountOff > 0) {
+        feeAmount.innerHTML = `
+          <span style="color:#22c55e;font-family:var(--font-display);font-size:1.2rem;font-weight:700">
+            $${finalFee} USDT
+          </span>
+          <span class="fee-original">$${BASE_FEE}</span>
+        `;
+        hiddenFee.value     = `$${finalFee} USDT`;
+        hiddenDiscount.value = label;
+      } else {
+        feeAmount.innerHTML = `$${BASE_FEE} <span style="font-size:0.75rem;font-weight:400;color:var(--text2)">USDT</span>`;
+        hiddenFee.value     = `$${BASE_FEE} USDT`;
+        hiddenDiscount.value = 'None';
+      }
+    }
+
+    function shakeInput(el) {
+      el.style.animation = 'none';
+      el.offsetHeight; // reflow
+      el.style.animation = 'shake 0.4s ease';
+      el.style.borderColor = '#ef4444';
+      setTimeout(() => { el.style.borderColor = ''; el.style.animation = ''; }, 800);
+    }
+
+    applyBtn.addEventListener('click', () => {
+      const code = (discountInput.value || '').trim().toUpperCase();
+      if (!code) {
+        feedback.textContent = '';
+        updateFeeDisplay(0, '');
+        return;
+      }
+      if (DISCOUNT_CODES[code]) {
+        const { off, label } = DISCOUNT_CODES[code];
+        feedback.textContent = `✓ ${label}`;
+        feedback.className = 'discount-feedback valid';
+        updateFeeDisplay(off, `${code} — ${label}`);
+      } else {
+        feedback.textContent = '✗ Invalid code';
+        feedback.className = 'discount-feedback invalid';
+        shakeInput(discountInput);
+        updateFeeDisplay(0, '');
+      }
+    });
+
+    discountInput.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') { e.preventDefault(); applyBtn.click(); }
+    });
+
+    /* Auto uppercase discount input */
+    discountInput.addEventListener('input', () => {
+      const pos = discountInput.selectionStart;
+      discountInput.value = discountInput.value.toUpperCase();
+      discountInput.setSelectionRange(pos, pos);
+    });
+
+    /* ── FORM SUBMIT (AJAX for success state) ── */
+    payForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      const submitBtn = payForm.querySelector('.submit-btn');
+      submitBtn.textContent = 'Submitting…';
+      submitBtn.disabled = true;
+
+      try {
+        const formData = new FormData(payForm);
+        const response = await fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          body: formData,
+        });
+        const result = await response.json();
+
+        if (result.success) {
+          payForm.style.display = 'none';
+          successState.classList.add('show');
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        } else {
+          throw new Error(result.message || 'Submission failed');
+        }
+      } catch (err) {
+        submitBtn.textContent = 'Submit Application →';
+        submitBtn.disabled = false;
+        alert('Submission error: ' + err.message + '\nPlease try again or email davidemre1991@gmail.com');
+      }
+    });
+
+    /* ── HEADER SCROLL ── */
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 10) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    }, { passive: true });
+
+    /* ── MOBILE NAV ── */
+    const toggle = document.querySelector('.nav-toggle');
+    if (toggle) {
+      const mobileNav = document.createElement('nav');
+      mobileNav.className = 'mobile-nav';
+      mobileNav.innerHTML = `
+        <a href="index.html#how-it-works">How It Works</a>
+        <a href="index.html#the-system">The System</a>
+        <a href="index.html#tiers">Tiers</a>
+        <a href="index.html#about">About</a>
+        <a href="payment.html" class="btn btn--orange">Apply Now</a>
+        <button class="mobile-nav-close" aria-label="Close">✕</button>
+      `;
+      document.body.appendChild(mobileNav);
+
+      toggle.addEventListener('click', () => mobileNav.classList.toggle('open'));
+      mobileNav.querySelector('.mobile-nav-close').addEventListener('click', () => {
+        mobileNav.classList.remove('open');
+      });
+    }
+
+  })();
+  </script>
+
+</body>
+</html>
